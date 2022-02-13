@@ -1,10 +1,40 @@
-.App {
+h1 {
+  margin: 0;
   text-align: center;
+  color: lightseagreen;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  font-size: 50px;
+}
+.container{
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  padding: 30px;
+  border-radius: 20px;
+  background: #282c34;
+  justify-content: center;
+  text-align:center;
+  align-items: center;
+}
+table{ 
+  display: block;
+  background: #61dafb;
+  margin: 10px 0;
+  padding: 25px;
+  width: 40%;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 20px;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tbody{
+display: block;
+width: 40%;
+  background: beige;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
