@@ -6,24 +6,46 @@ h1 {
   letter-spacing: 15px;
   font-size: 50px;
 }
+label{
+  color: beige;
+}
  #container{
   display: block;
   margin: 10px auto;
-  width: 80%;
+  width: 90%;
   padding: 30px;
   border-radius: 20px;
-  background: beige;
+  background: #282c34;
   justify-content: center;
   text-align:center;
   align-items: center;
 }
+input .ingreso{
+  margin-bottom: 10px;
+}
+button{
+  margin: 10px 0;
+  padding: 10px 30px ;
+  background: crimson;
+  color: #282c34;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+}
 table{
  background: darkcyan;
  font-weight: 500;
+ border-radius: 20px;
+ border: none;
+}
+table tbody{
+  border: none;
 }
 table thead{
   background: crimson;
   text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
 }
 table thead th{
   padding:20px;
@@ -44,6 +66,12 @@ input{
   padding: 20px;
 } */
 
+@media screen and (max-width:400px){
+  #container{
+    width: 90%;
+  }
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

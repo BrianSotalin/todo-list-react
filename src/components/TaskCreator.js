@@ -9,7 +9,7 @@ export const TaskCreator = props => {
     }
     return (
         <div className='my-1'>
-            <input type="text" className='form-control' value={ newTaskName} onChange={updateNewTaskValue} />
+            <input type="text" className='form-control ingreso' value={ newTaskName} onChange={updateNewTaskValue} />
             <button className='boton' onClick={createNewTask}>Añadir</button>
         </div>
     )

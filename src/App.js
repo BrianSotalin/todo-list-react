@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import './App.css';
 import {TaskRow} from './components/TaskRow'
 import {TaskBanner} from './components/TaskBanner'
@@ -14,12 +14,35 @@ function App() {
     {name: 'Tarea-4',done:false}
   ]);
 
-  const[ShowCompleteTask,setShowCompleteTask]=useState(true);
+  useEffect(()=>{
+
+    let data = localStorage.getItem('task');
+    if(data != null){
+      setTaskItem(JSON.parse(data));
+    }else{
+      setUserName('User-example')
+      setTaskItem([
+        {name: 'Tarea-1 ejemplo',done:false}
+      ])
+      setShowCompleteTask(false);
+    }
+    console.log(taskItem[0]);
+  },[]);
+  useEffect(()=>{
+    localStorage.setItem('task',JSON.stringify(taskItem))
+  },[taskItem])
+
+  const[ShowCompleteTask,setShowCompleteTask]=useState(false);
   
   const createNewTask = taskName =>{
     if(!taskItem.find(t => t.name === taskName)){//...""- selecciona los datos anteriores
       setTaskItem([...taskItem,{name: taskName , done: false}])
-    }else{
+      console.log(taskName)
+    }
+    else if( taskName==null){
+         alert("Tarea vacia")
+    }
+    else if(taskItem.find(t => t.name === taskName)){
       alert("La tarea ya existe")
     }
   }
@@ -32,7 +55,7 @@ function App() {
   taskItem
   .filter(task => task.done === doneValue)
   .map(task =>(
-    <TaskRow   task={task} key={task.name}  toggleTask={toggleTask}/>
+    <TaskRow   task={task} key={task.name}  toggleTask={toggleTask} />
   ))
 
   
