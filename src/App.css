@@ -6,36 +6,43 @@ h1 {
   letter-spacing: 15px;
   font-size: 50px;
 }
-.container{
+ #container{
   display: block;
   margin: 10px auto;
   width: 80%;
   padding: 30px;
   border-radius: 20px;
-  background: #282c34;
+  background: beige;
   justify-content: center;
   text-align:center;
   align-items: center;
 }
-table{ 
-  display: block;
-  background: #61dafb;
-  margin: 10px 0;
-  padding: 25px;
-  width: 40%;
-  text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 20px;
- 
+table{
+ background: darkcyan;
+ font-weight: 500;
 }
+table thead{
+  background: crimson;
+  text-transform: uppercase;
+}
+table thead th{
+  padding:20px;
+  background: firebrick;
+} 
 
-tbody{
+/* tbody{
 display: block;
 width: 40%;
   background: beige;
   padding: 10px;
   border-radius: 20px;
 }
+tbody td{
+  padding: 10px;
+}
+input{
+  padding: 20px;
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -52,7 +59,7 @@ width: 40%;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} 
 
 .App-link {
   color: #61dafb;
